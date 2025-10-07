@@ -2,8 +2,14 @@
 #include <iostream>
 using namespace std;
 template<typename T>
+void my_swap(T& a, T& b) {
+    T temp = a;
+    a = b;
+    b = temp;
+}
+template<typename T>
 void my_swap(vector<T>& a, vector<T>& b) {
-    swap(a, b);
+    swap(a, b); 
 }
 int main() {
 	int x = 123, y = 23;
@@ -18,4 +24,5 @@ int main() {
 	cout << "vec1[2] : " << vec1[2] << endl << "vec2[0] : " << vec2[0] << endl;
 	return 0;
 }
+
 
